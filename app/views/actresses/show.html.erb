@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @actress.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <!-- <%= @actress.image %> -->
+  
+  <%= image_tag @actress.image , style: 'height:100px;width:100px' %>
+</p>
+
+<%= link_to 'Edit', edit_actress_path(@actress) %> |
+<%= link_to 'Back', actresses_path %>
