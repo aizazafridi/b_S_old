@@ -1,6 +1,6 @@
 class ActressesController < ApplicationController
   before_action :set_actress, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /actresses
   # GET /actresses.json
   def index
@@ -10,6 +10,7 @@ class ActressesController < ApplicationController
   # GET /actresses/1
   # GET /actresses/1.json
   def show
+     @actress = Actress.find(params[:id])
   end
 
   # GET /actresses/new
