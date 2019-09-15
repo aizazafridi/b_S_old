@@ -1,0 +1,18 @@
+<p> Actresses</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @actress.each do |actress| %>
+            <tr>
+                <td> <%= actress.name %> </td>
+                <td> <%= image_tag actress.image, :style => "border: 1px solid red; width: 200px; height: 200px" %> </td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>
